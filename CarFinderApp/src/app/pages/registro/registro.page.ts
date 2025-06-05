@@ -2,14 +2,14 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
 import { IonicModule } from '@ionic/angular';
-import { FormsModule } from '@angular/forms'; // Asegúrate de importar FormsModule
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-registro',
   templateUrl: './registro.page.html',
   styleUrls: ['./registro.page.scss'],
-  standalone: true, // Asegúrate de que la página sea standalone si es necesario
-  imports: [IonicModule, FormsModule], // Asegúrate de que FormsModule esté importado
+  standalone: true,
+  imports: [IonicModule, FormsModule],
 })
 export class RegistroPage {
   email: string = '';

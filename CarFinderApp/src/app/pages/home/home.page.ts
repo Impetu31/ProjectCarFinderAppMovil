@@ -1,22 +1,17 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
-import { IonicModule } from '@ionic/angular'; // Importa IonicModule
+import { IonicModule } from '@ionic/angular';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.page.html',
   styleUrls: ['./home.page.scss'],
-  standalone: true,  // Asegúrate de que la página sea standalone si es necesario
-  imports: [IonicModule],  // Asegúrate de que IonicModule esté importado
+  standalone: true,
+  imports: [IonicModule, CommonModule, RouterModule], // Asegúrate de importar RouterModule aquí
 })
 export class HomePage {
-  constructor(private router: Router) {}
+  constructor() {}
 
-  goToLogin() {
-    this.router.navigate(['/login']);
-  }
-
-  goToRegistro() {
-    this.router.navigate(['/registro']);
-  }
+  // Métodos adicionales si es necesario
 }
